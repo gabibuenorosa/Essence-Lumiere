@@ -1,0 +1,79 @@
+/* ===========================
+   Seção: Hero Principal (.essence-hero)
+   =========================== */
+.essence-hero {
+  position: relative;
+  width: 100%;
+  height: 900px; /* Altura inicial do hero */
+  background-image: url(../img/final.png);
+  background-size: cover;       /* Cobre toda a área do container */
+  background-position: center;  /* Centraliza a imagem de fundo */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  display: flex;
+  align-items: center;          /* Alinha conteúdo verticalmente ao centro */
+  justify-content: flex-end;    /* Alinha conteúdo à direita */
+  padding-right: 5%;            /* Espaço à direita */
+}
+
+/* Wrapper do botão dentro do hero */
+.essence-button-wrapper {
+  text-align: right;            /* Alinha o conteúdo à direita */
+}
+
+/* ===========================
+   Seção: Botão (.essence-btn)
+   =========================== */
+.essence-btn {
+  background-color: #F5F5DC;    /* Cor de fundo bege claro */
+  color: #a9502b;               /* Cor do texto marrom */
+  border: none;
+  padding: 14px 30px;           /* Espaçamento interno */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease; /* Transição suave no hover */
+}
+
+/* Efeito hover no botão */
+.essence-btn:hover {
+  background-color: #8a3f21;    /* Cor mais escura ao passar o mouse */
+}
+
+/* ===========================
+   Responsividade
+   =========================== */
+
+/* Para tablets e telas médias (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .essence-hero {
+    height: 600px;              /* Altura reduzida para telas menores */
+    justify-content: center;    /* Centraliza o conteúdo */
+    padding-right: 0;           /* Remove o padding à direita */
+  }
+
+  .essence-btn {
+    padding: 12px 25px;         /* Ajuste no padding do botão */
+    font-size: 13px;            /* Fonte levemente menor */
+  }
+}
+
+/* Para celulares (max-width: 600px) */
+@media (max-width: 600px) {
+  .essence-hero {
+    height: 400px;              /* Altura ainda menor para celulares */
+    justify-content: center;    /* Centraliza o conteúdo */
+    padding: 0 10px;            /* Espaço horizontal nas laterais */
+  }
+
+  .essence-button-wrapper {
+    text-align: center;         /* Centraliza texto no wrapper */
+    width: 100%;                /* Largura total para melhor alinhamento */
+  }
+
+  .essence-btn {
+    width: 100%;                /* Botão ocupa toda a largura disponível */
+    padding: 12px 0;            /* Padding vertical maior, horizontal zero */
+    font-size: 16px;            /* Fonte maior para melhor toque */
+  }
+}

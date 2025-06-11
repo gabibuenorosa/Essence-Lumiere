@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Essence Lumière</title>
+
+  <!-- Ícone da aba do navegador -->
+  <link rel="shortcut icon" type="imagex/png" href="./img/aba.png">
+
+  <!-- Arquivo CSS externo -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Estilo inline para comportamento de rolagem suave -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Cabeçalho com logo e menu de navegação -->
+  <header>
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo da empresa" />
+    </div>
+
+    <nav>
+      <!-- Checkbox para ativar menu mobile -->
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+      <!-- Links para navegação interna via IDs -->
+      <ul class="menu">
+        <li><a href="#tipos">Tipos</a></li>
+        <li><a href="#sobre">Sobre Nós</a></li>
+        <li><a href="#processo">Fabricação</a></li>
+        <li><a href="#avaliacoes">Avaliações</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção banner com conteúdo principal e call to action -->
+  <section class="banner-parallax">
+    <div class="banner-content">
+      <h1>Acenda sua critatividade</h1>
+      <p>Descubra técnicas, aromas e segredos para transformar cera em experiência sensorial.</p>
+      <button id="cta-btn">Quero aprender!</button>
+    </div>
+  </section>
+
+  <!-- Seção Tipos de Velas -->
+  <section id="tipos" class="vela-section">
+    <h2>Tipos de Vela</h2>
+    <div class="vela-container">
+      <!-- Cartão tipo vela Aromática -->
+      <div class="vela-card">
+        <img src="img/aromatica.png" alt="Vela Aromática" />
+        <h3>Vela Aromática</h3>
+      </div>
+      <!-- Cartão tipo vela Decorativa -->
+      <div class="vela-card">
+        <img src="img/decorativa.png" alt="Vela Decorativa" />
+        <h3>Vela Decorativa</h3>
+      </div>
+      <!-- Cartão tipo vela Terapêutica -->
+      <div class="vela-card">
+        <img src="img/terapeutica.png" alt="Vela Terapêutica" />
+        <h3>Vela Terapêutica</h3>
+      </div>
+      <!-- Cartão tipo vela Personalizada -->
+      <div class="vela-card">
+        <img src="img/personalizada.png" alt="Vela Personalizada" />
+        <h3>Vela Personalizada</h3>
+      </div>
+      <!-- Espaço para adicionar novos tipos de velas -->
+    </div>
+  </section>
+
+  <!-- Seção Sobre Nós com imagem e texto -->
+  <section id="sobre" class="sobre-nos-section">
+    <div class="sobre-nos-container">
+      <div class="sobre-nos-img">
+        <img src="img/section.png" alt="Sobre nós" />
+      </div>
+      <div class="sobre-nos-texto">
+        <h2>Sobre Nós</h2>
+        <p>
+          Curso online de velas artesanais que une aprendizado prático, estética inspiradora e suporte dedicado,
+          oferecendo uma experiência acolhedora e transformadora para iniciantes e entusiastas.
+        </p>
+        <button onclick="document.getElementById('login-modal').style.display='flex'">Saiba Mais</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de destaque da vela Essence -->
+  <section class="destaque-vela">
+    <div class="destaque-container">
+      <div class="destaque-imagem">
+        <img src="img/vela1.png" alt="Vela Essence" />
+      </div>
+      <p>
+        Com uma abordagem prática, estética cuidadosamente elaborada e suporte individualizado,
+        proporcionamos uma experiência de aprendizado acolhedora e transformadora.
+        <span class="alunos">Mais de 500 alunos</span> já concluíram o curso, com um índice de satisfação superior a
+        <span class="percentual">98%</span>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Seção Processo de Fabricação com cards interativos -->
+  <section id="processo" class="processo-section">
+    <p>Processo de Fabricação</p>
+    <div class="processo-grid">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="img/fabricação.png" alt="Preparando velas" />
+          </div>
+          <div class="card-back">
+            <img src="img/fa5.png" alt="Preparando velas verso" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="img/fabricaçao1.png" alt="Derretendo cera" />
+          </div>
+          <div class="card-back">
+            <img src="img/fa1.png" alt="Derretendo cera verso" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="img/fabricaçao2.png" alt="Despejando cera" />
+          </div>
+          <div class="card-back">
+            <img src="img/fa2.png" alt="Despejando cera verso" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="img/fa3.png" alt="Secagem da vela" />
+          </div>
+          <div class="card-back">
+            <img src="img/fa4.png" alt="Secagem verso" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Avaliações de alunos com comentários e estrelas -->
+  <section id="avaliacoes" class="comentarios-section">
+    <h2>O que estão dizendo</h2>
+    <div class="comentarios-container">
+      <!-- Comentário 1 -->
+      <div class="comentario-balao">
+        <div class="estrelas">⭐⭐⭐⭐⭐</div>
+        <p>Esse curso superou minhas expectativas!</p>
+        <span>— Marina R.</span>
+      </div>
+      <!-- Comentário 2 -->
+      <div class="comentario-balao">
+        <div class="estrelas">⭐⭐⭐⭐⭐</div>
+        <p>Aprendi muito e estou vendendo minhas velas!</p>
+        <span>— João M.</span>
+      </div>
+      <!-- Comentário 3 -->
+      <div class="comentario-balao">
+        <div class="estrelas">⭐⭐⭐⭐⭐</div>
+        <p>Didática excelente e suporte incrível.</p>
+        <span>— Luiza T.</span>
+      </div>
+      <!-- Comentário 4 -->
+      <div class="comentario-balao">
+        <div class="estrelas">⭐⭐⭐⭐⭐</div>
+        <p>Valeu cada centavo. Recomendo demais!</p>
+        <span>— Carla B.</span>
+      </div>
+      <!-- Comentário 5 -->
+      <div class="comentario-balao">
+        <div class="estrelas">⭐⭐⭐⭐⭐</div>
+        <p>Gostei muito da qualidade do conteúdo.</p>
+        <span>— Diego L.</span>
+      </div>
+      <!-- Comentário 6 -->
+      <div class="comentario-balao">
+        <div class="estrelas">⭐⭐⭐⭐⭐</div>
+        <p>Experiência maravilhosa e inspiradora!</p>
+        <span>— Fernanda K.</span>
+      </div>
+      <!-- Comentário 7 -->
+      <div class="comentario-balao">
+        <div class="estrelas">⭐⭐⭐⭐⭐</div>
+        <p>Excelente suporte e aprendizado contínuo.</p>
+        <span>— Rafael S.</span>
+      </div>
+      <!-- Comentário 8 -->
+      <div class="comentario-balao">
+        <div class="estrelas">⭐⭐⭐⭐⭐</div>
+        <p>Indico para todos que querem crescer!</p>
+        <span>— Amanda P.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção com botão de chamada para ação -->
+  <section class="essence-hero">
+    <div class="essence-button-wrapper">
+      <button class="essence-btn">COMECE AGORA!</button>
+    </div>
+  </section>
+
+  <!-- Rodapé com informações e formulário para newsletter -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <h4>Sobre Nós</h4>
+        <p>Nossa missão é oferecer experiências únicas e encantadoras.</p>
+        <p>Contato: <a href="mailto:contato@exemplo.com">contato@exemplo.com</a></p>
+        <p>Endereço: Rua das Flores, 123 - Cidade Encanto</p>
+      </div>
+      <div class="footer-right">
+        <h4>Assine nossa newsletter</h4>
+        <form class="email-form" action="#" method="POST">
+          <label for="email" class="visually-hidden">Seu email:</label>
+          <input type="email" id="email" name="email" required />
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Exemplo. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <!-- Modal para contato -->
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-image">
+        <img src="img/modal.png" alt="Imagem do formulário" />
+      </div>
+      <div class="modal-form">
+        <span class="close-btn" id="close-modal">&times;</span>
+        <h2>Entre em Contato</h2>
+        <form>
+          <input type="text" placeholder="Nome" required />
+          <input type="email" placeholder="Email" required />
+          <input type="tel" placeholder="Telefone" required />
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botão para voltar ao topo da página -->
+  <button id="scrollTopBtn" title="Voltar ao topo">&#8679;</button>
+
+  <!-- Scripts externos para header, modal e scroll -->
+  <script src="./js/header.js"></script>
+  <script src="./js/modal.js"></script>
+  <script src="./js/scroll.js"></script>
+</body>
+</html>

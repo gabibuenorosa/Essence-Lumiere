@@ -1,0 +1,151 @@
+/* ==============================
+   Seção: Comentários (.comentarios-section)
+   ============================== */
+.comentarios-section {
+  background: #fff5e1;             /* Fundo bege claro */
+  padding: 100px 20px;             /* Espaçamento interno */
+  text-align: center;              /* Centraliza o texto */
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Título da seção */
+.comentarios-section h2 {
+  font-size: 2.5rem;               /* Tamanho grande para destaque */
+  margin-bottom: 60px;             /* Espaço abaixo do título */
+  color: #a9502b;                  /* Cor marrom */
+}
+
+/* Container dos comentários */
+.comentarios-container {
+  display: flex;
+  flex-wrap: wrap;                 /* Permite múltiplas linhas */
+  justify-content: center;         /* Centraliza os balões horizontalmente */
+  gap: 30px;                      /* Espaço entre os balões */
+  max-width: 1240px;               /* Largura máxima baseada em 4 balões + gaps */
+  margin: 0 auto;                  /* Centraliza o container na página */
+}
+
+/* Balão de comentário */
+.comentario-balao {
+  position: relative;
+  background: #fffaf0;             /* Fundo bege clarinho */
+  border: 2px solid #a9502b;       /* Borda marrom */
+  border-radius: 20px;             /* Bordas arredondadas */
+  padding: 40px 30px;              /* Espaçamento interno */
+  width: 280px;
+  height: 180px;
+  overflow: hidden;                /* Esconde o conteúdo que ultrapassa */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.05); /* Sombra suave */
+  transition: background 0.4s ease, transform 0.3s ease; /* Transições suaves */
+  cursor: pointer;
+  display: flex;
+  align-items: center;             /* Alinha verticalmente */
+  justify-content: center;         /* Centraliza horizontalmente */
+  flex-direction: column;          /* Conteúdo em coluna */
+  flex-shrink: 0;                  /* Não encolhe em flexbox */
+}
+
+/* Estrelas centralizadas dentro do balão */
+.comentario-balao .estrelas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centraliza exatamente */
+  font-size: 1.5rem;
+  color: #f5b301;                  /* Cor amarela dourada */
+  transition: opacity 0.4s ease;
+  text-align: center;
+  pointer-events: none;            /* Não interfere em eventos do mouse */
+}
+
+/* Texto e autor do comentário inicialmente escondidos */
+.comentario-balao p,
+.comentario-balao span {
+  opacity: 0;
+  transform: translateY(10px);    /* Leve deslocamento para baixo */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  margin: 0;
+  color: #333;
+  text-align: center;
+  max-width: 90%;
+  z-index: 1;                     /* Fica acima das estrelas */
+}
+
+/* Efeito hover no balão */
+.comentario-balao:hover {
+  background-color: #ffe6c7;      /* Fundo mais claro ao passar o mouse */
+  transform: scale(1.05);         /* Leve aumento do tamanho */
+}
+
+/* Esconde as estrelas quando em hover */
+.comentario-balao:hover .estrelas {
+  opacity: 0;
+}
+
+/* Exibe o texto e autor quando em hover */
+.comentario-balao:hover p,
+.comentario-balao:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==============================
+   Responsividade
+   ============================== */
+
+/* Telas até 1280px */
+@media (max-width: 1280px) {
+  .comentarios-container {
+    max-width: 100%;              /* Container ocupa toda a largura possível */
+    padding: 0 10px;
+  }
+}
+
+/* Telas até 1024px */
+@media (max-width: 1024px) {
+  .comentario-balao {
+    width: 220px;                 /* Balões menores */
+    height: 160px;
+  }
+  .comentarios-container {
+    gap: 20px;                   /* Espaço reduzido entre balões */
+  }
+  .comentarios-section h2 {
+    font-size: 2rem;             /* Fonte menor no título */
+    margin-bottom: 40px;
+  }
+}
+
+/* Telas até 768px (tablets e similares) */
+@media (max-width: 768px) {
+  /* Ajusta container para ter 2 balões por linha */
+  .comentarios-container {
+    max-width: 480px;            /* 2 balões de 220px + gap */
+    margin: 0 auto;              /* Centraliza o container */
+  }
+  .comentario-balao {
+    width: 220px;
+    height: 160px;
+  }
+}
+
+/* Telas até 480px (celulares) */
+@media (max-width: 480px) {
+  /* Container passa a coluna única */
+  .comentarios-container {
+    flex-direction: column;      /* Coluna única */
+    max-width: 100%;
+    gap: 30px;
+    padding: 0 15px;
+  }
+  .comentario-balao {
+    width: 100%;                 /* Largura total do container */
+    max-width: 300px;            /* Limita o máximo para não ficar muito largo */
+    height: auto;                /* Altura automática */
+    padding: 25px 15px;          /* Padding reduzido */
+    margin: 0 auto;              /* Centraliza cada balão */
+  }
+  .comentarios-section {
+    padding: 60px 15px;          /* Padding reduzido na seção */
+  }
+}

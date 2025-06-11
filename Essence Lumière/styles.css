@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ruda:wght@400..900&display=swap');
+@import url('./css/global.css');
+@import url('./css/banner.css');
+@import url('./css/footer.css');
+@import url('./css/header.css');
+@import url('./css/modal.css');
+@import url('./css/scroll_top.css');
+@import url('./css/section_botao.css');
+@import url('./css/section_comentarios.css');
+@import url('./css/section_destaque.css');
+@import url('./css/section_processo.css');
+@import url('./css/section_sobre.css');
+@import url('./css/section_tipos.css');

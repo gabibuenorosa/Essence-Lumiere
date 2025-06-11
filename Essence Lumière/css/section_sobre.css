@@ -1,0 +1,128 @@
+/* ==============================
+   Seção Sobre Nós (.sobre-nos-section)
+   ============================== */
+.sobre-nos-section {
+  background-color: #0E1A18;       /* Fundo verde-escuro */
+  color: #f5f5dc;                  /* Texto bege claro */
+  padding: 0;                     /* Sem padding */
+}
+
+/* Container flexível da seção */
+.sobre-nos-container {
+  display: flex;
+  align-items: center;             /* Alinha verticalmente ao centro */
+  justify-content: space-between;  /* Espaço entre os itens */
+  min-height: 400px;               /* Altura mínima */
+  max-width: 100%;                 /* Largura máxima total */
+  flex-wrap: wrap;                /* Quebra para próximas linhas se necessário */
+}
+
+/* Container da imagem */
+.sobre-nos-img {
+  flex: 1;                        /* Ocupa metade do espaço */
+  height: 100%;
+  min-width: 300px;               /* Largura mínima para responsividade */
+}
+
+/* Imagem responsiva */
+.sobre-nos-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;              /* Ajusta imagem cobrindo área */
+  border-radius: 0;              /* Sem bordas arredondadas */
+}
+
+/* Container do texto */
+.sobre-nos-texto {
+  flex: 1;                        /* Ocupa metade do espaço */
+  padding: 3rem;                  /* Espaçamento interno */
+  display: flex;
+  flex-direction: column;         /* Empilha itens verticalmente */
+  align-items: center;            /* Centraliza horizontalmente */
+  justify-content: center;        /* Centraliza verticalmente */
+  text-align: center;             /* Texto centralizado */
+  min-width: 300px;               /* Largura mínima */
+}
+
+/* Título */
+.sobre-nos-texto h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+/* Parágrafo */
+.sobre-nos-texto p {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* Botão */
+.sobre-nos-texto button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: normal;
+  background-color: #f5f5dc;      /* Bege claro */
+  color: #333;                    /* Texto escuro */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  width: fit-content;             /* Largura ajusta ao conteúdo */
+}
+
+/* Efeito hover no botão */
+.sobre-nos-texto button:hover {
+  background-color: #CBB78B;      /* Bege mais escuro */
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ==============================
+   Responsividade
+   ============================== */
+
+/* Telas até 1024px */
+@media (max-width: 1024px) {
+  .sobre-nos-container {
+    flex-direction: column;       /* Empilha os itens verticalmente */
+  }
+
+  .sobre-nos-img,
+  .sobre-nos-texto {
+    width: 100%;                  /* Ocupa 100% da largura */
+    height: auto;                 /* Altura automática */
+    padding: 2rem;
+  }
+
+  .sobre-nos-texto h2 {
+    font-size: 2rem;
+  }
+
+  .sobre-nos-texto p {
+    font-size: 1rem;
+  }
+}
+
+/* Telas até 600px */
+@media (max-width: 600px) {
+  .sobre-nos-texto {
+    padding: 1.5rem 1rem;
+  }
+
+  .sobre-nos-texto h2 {
+    font-size: 1.6rem;
+  }
+
+  .sobre-nos-texto p {
+    font-size: 0.95rem;
+  }
+
+  .sobre-nos-texto button {
+    width: 100%;                  /* Botão ocupa toda largura */
+    font-size: 1rem;
+  }
+}

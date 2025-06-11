@@ -1,0 +1,97 @@
+/* ============================
+   Estilo da seção banner-parallax
+   ============================ */
+.banner-parallax {
+  height: 90vh; /* altura da viewport para ocupar quase toda a tela */
+  background-image: url("../img/banner.png"); /* imagem de fundo */
+  background-attachment: fixed; /* efeito parallax fixando a imagem */
+  background-position: center; /* centraliza a imagem */
+  background-size: cover; /* cobre toda a área */
+  background-repeat: no-repeat; /* sem repetição da imagem */
+  
+  /* Centralização do conteúdo com flexbox */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem; /* espaçamento horizontal */
+}
+
+/* ============================
+   Conteúdo dentro do banner
+   ============================ */
+.banner-content {
+  color: #F5F5DC; /* cor bege clara */
+  text-shadow: 1px 1px 4px black; /* sombra para melhorar leitura sobre fundo */
+}
+
+/* Título principal */
+.banner-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem; /* espaçamento abaixo do título */
+}
+
+/* Parágrafo do banner */
+.banner-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem; /* espaçamento maior para separar do botão */
+}
+
+/* ============================
+   Botão CTA (Call to Action)
+   ============================ */
+#cta-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: normal; /* peso da fonte normal */
+  border: none;
+  background-color: #F5F5DC; /* cor de fundo bege */
+  color: #333; /* texto escuro */
+  cursor: pointer; /* cursor de mão para indicar clicável */
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* animações suaves */
+  border-radius: 8px; /* cantos arredondados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* sombra leve */
+}
+
+/* Efeito hover no botão */
+#cta-btn:hover {
+  background-color: #CBB78B; /* cor mais escura ao passar o mouse */
+  transform: scale(1.05); /* leve aumento */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* sombra mais forte */
+}
+
+/* ============================
+   Responsividade
+   ============================ */
+
+/* Para telas até 768px (tablets e dispositivos médios) */
+@media (max-width: 768px) {
+  .banner-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .banner-content p {
+    font-size: 1.1rem;
+  }
+
+  #cta-btn {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+/* Para telas até 480px (celulares pequenos) */
+@media (max-width: 480px) {
+  .banner-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .banner-content p {
+    font-size: 1rem;
+  }
+
+  #cta-btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}

@@ -1,0 +1,108 @@
+/* === Comportamento de Scroll Suave na Página === */
+html {
+  scroll-behavior: smooth;
+}
+
+/* === Estilo do Header Principal === */
+header {
+  background: #CBB78B;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* Efeito aplicado ao header ao rolar a página */
+header.scrolled {
+  padding: 0.75rem 2rem; /* Encolhe o padding para efeito visual */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+  transform: translateY(-2px); /* Leve deslocamento para cima */
+}
+
+/* === Logo no Header === */
+.logo img {
+  height: 40px;
+}
+
+/* === Navegação === */
+nav {
+  position: relative; /* Para posicionar o menu mobile */
+}
+
+/* Lista de links do menu principal */
+nav ul.menu {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem; /* Espaçamento entre os itens */
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo dos links da navegação */
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efeito hover nos links */
+nav a:hover {
+  color: #6d2610;
+  transform: scale(1.05);
+}
+
+/* Efeito ao clicar no link */
+nav a:active {
+  color: #6d2610;
+}
+
+/* === Menu Mobile === */
+
+/* Ícone do menu (hambúrguer) escondido por padrão */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Checkbox usado para controlar o menu mobile */
+#menu-toggle {
+  display: none;
+}
+
+/* === Estilos para telas menores (mobile) === */
+@media (max-width: 768px) {
+  /* Mostrar o ícone do menu no mobile */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Menu em coluna para mobile */
+  nav ul.menu {
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 100%; /* Posicionado logo abaixo do header */
+    right: 0;
+    width: 200px;
+    display: none; /* Escondido por padrão */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Mostrar menu quando o checkbox estiver marcado */
+  #menu-toggle:checked + .menu-icon + ul.menu {
+    display: flex;
+  }
+
+  /* Estilo dos itens do menu mobile */
+  nav ul.menu li {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+}

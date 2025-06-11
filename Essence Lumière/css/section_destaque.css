@@ -1,0 +1,78 @@
+/* ==============================
+   Seção: Destaque Vela (.destaque-vela)
+   ============================== */
+.destaque-vela {
+  background-color: #F5F5DC;       /* Fundo bege claro */
+  padding: 4rem 2rem;              /* Espaçamento vertical e horizontal */
+  text-align: center;              /* Centraliza o texto */
+  font-weight: normal;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Container interno para centralização e organização */
+.destaque-container {
+  max-width: 900px;                /* Largura máxima do conteúdo */
+  margin: 0 auto;                  /* Centraliza horizontalmente */
+  display: flex;
+  flex-direction: column;          /* Organização em coluna */
+  align-items: center;             /* Centraliza itens horizontalmente */
+  padding: 0 1rem;                 /* Espaçamento lateral */
+}
+
+/* Estilo da imagem dentro do destaque */
+.destaque-imagem img {
+  width: 80%;                     /* Ajusta tamanho proporcional */
+  height: auto;                   /* Mantém proporção */
+  border-radius: 20px;            /* Bordas arredondadas */
+  margin-bottom: 2rem;            /* Espaço abaixo da imagem */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+/* Efeito hover na imagem */
+.destaque-imagem img:hover {
+  transform: scale(1.05);         /* Leve aumento */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+}
+
+/* Parágrafo dentro do container */
+.destaque-container p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;               /* Limita a largura para facilitar leitura */
+  color: #333;
+  text-align: center;
+}
+
+/* Estilos específicos para elementos com classes .alunos e .percentual */
+.destaque-container .alunos,
+.destaque-container .percentual {
+  color: #a9502b;                /* Cor marrom */
+}
+
+/* ==============================
+   Responsividade
+   ============================== */
+
+/* Telas até 768px */
+@media (max-width: 768px) {
+  .destaque-vela {
+    padding: 3rem 1rem;           /* Padding reduzido */
+  }
+
+  .destaque-container p {
+    font-size: 1rem;              /* Fonte menor */
+    line-height: 1.6;             /* Espaçamento entre linhas menor */
+  }
+
+  .destaque-imagem img:hover {
+    transform: scale(1.02);       /* Escala menor no hover para telas pequenas */
+  }
+}
+
+/* Telas até 480px */
+@media (max-width: 480px) {
+  .destaque-container p {
+    font-size: 0.95rem;           /* Fonte ainda menor */
+  }
+}

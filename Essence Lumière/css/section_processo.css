@@ -1,0 +1,107 @@
+/* ==============================
+   Seção Processo (.processo-section)
+   ============================== */
+.processo-section {
+  background-color: #f9f9f9;       /* Fundo cinza claro */
+  padding: 80px 20px;              /* Espaçamento vertical e horizontal */
+  min-height: 600px;               /* Altura mínima */
+  text-align: center;              /* Centraliza texto */
+}
+
+/* Título da seção */
+.processo-section h2 {
+  font-size: 0rem;                 /* Atenção: tamanho 0, não aparece */
+  margin-bottom: 3rem;             /* Espaço abaixo do título */
+  color: #5b3b27;                 /* Cor marrom escuro */
+  font-weight: bold;
+}
+
+/* Grid de cards */
+.processo-grid {
+  display: flex;
+  justify-content: center;         /* Centraliza horizontalmente */
+  align-items: flex-start;         /* Alinha itens ao topo */
+  gap: 2rem;                      /* Espaçamento entre cards */
+  margin-top: 3rem;               /* Espaço acima do grid */
+  flex-wrap: wrap;                /* Permite quebra de linha */
+}
+
+/* ==============================
+   Card base (.card)
+   ============================== */
+.card {
+  width: 280px;
+  height: 600px;
+  perspective: 1000px;            /* Perspectiva 3D para efeito de rotação */
+  flex-shrink: 0;                 /* Não encolher ao diminuir a tela */
+}
+
+/* Parte interna do card com efeito de rotação */
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;    /* Animação suave da rotação */
+  transform-style: preserve-3d; /* Mantém o efeito 3D */
+}
+
+/* Ao passar o mouse, gira o card */
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Face frontal e traseira do card */
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;  /* Esconde a face que está de costas */
+  border-radius: 1rem;           /* Bordas arredondadas */
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12); /* Sombra suave */
+}
+
+/* Imagens dentro dos cards */
+.card-front img,
+.card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;             /* Cobre o espaço mantendo proporção */
+}
+
+/* Face traseira do card rotacionada */
+.card-back {
+  transform: rotateY(180deg);
+}
+
+/* ==============================
+   Responsividade
+   ============================== */
+
+/* Para telas até 1024px */
+@media (max-width: 1024px) {
+  .card {
+    width: 240px;
+    height: 500px;
+  }
+}
+
+/* Para telas até 768px */
+@media (max-width: 768px) {
+  .processo-grid {
+    flex-direction: column;       /* Cards empilhados verticalmente */
+    align-items: center;          /* Centraliza na coluna */
+  }
+
+  .card {
+    width: 90%;                  /* Ocupa 90% da largura da tela */
+    height: auto;                /* Altura automática */
+    aspect-ratio: 2/3;           /* Mantém proporção 2:3 */
+  }
+
+  .card-front img,
+  .card-back img {
+    height: 100%;
+    object-fit: cover;
+  }
+}

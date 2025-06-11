@@ -1,0 +1,22 @@
+/* === Botão "Voltar ao Topo" === */
+#scrollTopBtn {
+  position: fixed;          /* Fixa o botão na tela */
+  bottom: 30px;             /* Distância da parte inferior */
+  right: 30px;              /* Distância da lateral direita */
+  width: 48px;              /* Largura do botão */
+  height: 48px;             /* Altura do botão */
+  font-size: 24px;          /* Tamanho da fonte do ícone/texto */
+  background-color: #333;   /* Cor de fundo padrão */
+  color: white;             /* Cor do texto/ícone */
+  border: none;             /* Sem borda */
+  border-radius: 6px;       /* Bordas arredondadas */
+  cursor: pointer;          /* Cursor muda para indicar clicável */
+  z-index: 9999;            /* Fica acima da maioria dos elementos */
+  display: none;            /* Inicialmente escondido */
+  transition: background 0.3s ease; /* Transição suave da cor de fundo */
+}
+
+/* Efeito hover para o botão */
+#scrollTopBtn:hover {
+  background-color: #555;   /* Cor de fundo ao passar o mouse */
+}

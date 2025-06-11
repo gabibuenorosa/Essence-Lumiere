@@ -1,0 +1,185 @@
+/* ============================
+   Estilo geral do rodapé
+   ============================ */
+.footer {
+  background-color: #CBB78B; /* fundo bege amarronzado */
+  color: #5c4634; /* texto marrom escuro */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  border-top: 1px solid #a9502b; /* borda superior */
+  padding: 3rem 0 2rem; /* espaçamento vertical */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* sombra suave */
+}
+
+/* Container interno do footer com flexbox */
+.footer-container {
+  display: flex;
+  justify-content: space-between; /* espaços entre os blocos */
+  align-items: flex-start;
+  flex-wrap: wrap; /* permite quebra em múltiplas linhas */
+  gap: 2rem; /* espaçamento entre blocos */
+  padding: 0 2rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Blocos esquerdo e direito do footer */
+.footer-left,
+.footer-right {
+  flex: 1 1 300px; /* flex-grow, flex-shrink, base width */
+  min-width: 0; /* evita overflow horizontal */
+}
+
+/* Títulos dos blocos do footer */
+.footer-left h4,
+.footer-right h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #a9502b; /* tom mais escuro do bege */
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Parágrafos da coluna esquerda */
+.footer-left p {
+  margin: 0.3rem 0;
+  line-height: 1.6;
+}
+
+/* Links da coluna esquerda */
+.footer-left a {
+  color: #5c4634;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover nos links */
+.footer-left a:hover {
+  color: #c58d6b;
+  border-bottom-color: #c58d6b;
+}
+
+/* Formulário de email */
+.email-form {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Campo de input email */
+.email-form input[type="email"] {
+  flex: 1; /* ocupa o máximo espaço disponível */
+  border: none;
+  border-bottom: 2px solid #333;
+  background: transparent;
+  font-size: 1rem;
+  color: #5c4634;
+  padding: 0.25rem 0;
+  transition: border-color 0.3s ease;
+}
+
+/* Placeholder do input email */
+.email-form input[type="email"]::placeholder {
+  color: #a9502b;
+}
+
+/* Foco no input email */
+.email-form input[type="email"]:focus {
+  outline: none;
+  border-color: #a9502b;
+}
+
+/* Botão do formulário */
+.email-form button {
+  background-color: #a9502b;
+  border: none;
+  color: #fef8f2;
+  font-weight: 700;
+  padding: 0.35rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover no botão */
+.email-form button:hover {
+  background-color: #c58d6b;
+}
+
+/* Área inferior do footer */
+.footer-bottom {
+  width: 100%;
+  padding-top: 2rem;
+  border-top: 1px solid #333;
+  font-size: 0.85rem;
+  color: #333;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* ============================
+   Responsividade
+   ============================ */
+
+/* Até 768px: tablets e dispositivos médios */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* empilha verticalmente */
+    gap: 0.5rem; /* espaçamento menor */
+  }
+
+  .footer-left,
+  .footer-right {
+    width: 100%; /* ocupa largura total */
+  }
+
+  .footer-left h4,
+  .footer-right h4 {
+    margin-bottom: 0.8rem; /* menos espaçamento nos títulos */
+  }
+
+  .footer-left p {
+    margin: 0.3rem 0;
+  }
+
+  .email-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem; /* menor espaçamento no form */
+  }
+
+  .email-form input[type="email"],
+  .email-form button {
+    width: 100%;
+  }
+
+  .email-form button {
+    margin-top: 0; /* remove margem extra */
+  }
+}
+
+/* Até 400px: celulares pequenos */
+@media (max-width: 400px) {
+  .footer-container {
+    padding: 0 1rem; /* reduz padding lateral */
+  }
+
+  .footer-left h4,
+  .footer-right h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .footer-left p {
+    font-size: 0.9rem;
+  }
+
+  .email-form {
+    gap: 0.4rem;
+  }
+}
