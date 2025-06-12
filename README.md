@@ -4,7 +4,7 @@
 
 ## 🌐 Visão Geral
 
-O site é totalmente desenvolvido com HTML e CSS puro, utilizando uma estrutura modular de estilos para facilitar a manutenção e o entendimento do código.
+O site é totalmente desenvolvido com HTML, JavaScript e CSS puro, utilizando uma estrutura modular de estilos para facilitar a manutenção e o entendimento do código.
 
 ### Principais Seções
 
